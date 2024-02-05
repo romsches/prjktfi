@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <special-header></special-header>
+    <main>
+        <section class="section_container">
+            <div>
+                <div class="filter">
+                    <h1>Nächste Blutspende-Termine</h1>
+                    <p>Hier finden Sie Informationen zu den nächsten Blutspende-Termine.</p>
+                    <p>Zuletzt gespendet am: <span id="termin_last"></span> .</p>
+                    <p>Sie duerfen wieder ab <span id="termin_next"></span> spenden</p>
+                    <h2>Filtern nach Ort</h2>
+                        <select id="location-filter" name="location" onchange="updateTable()">
+                            <option value="Alle Standorte">Alle Standorte</option>
+                            <option value="Mannheim">Mannheim</option>
+                            <option value="Baden-Baden">Baden-Baden</option>
+                            <option value="Ulm">Ulm</option>
+                            <option value="Tübingen">Tübingen</option>
+                            <option value="Frankfurt-am-Main">Frankfurt-am-Main</option>
+                            <option value="Kassel">Kassel</option>
+                            
+                        </select>
+                        
+                        <div class="filter_btn">
+                            <h2>Datum auswählen</h2>
+                            <input type="date" name="date" id="dtm"maxlength="4" pattern="\d{4}" title="Введите четыре цифры для года" required>
+                        </div>
+                        <button id="updateButton" onclick="updateTable()">Aktualisieren</button>
+                            
+                </div>
+            </div>
+            <div class="standorte">
+                <table id="meeting-table" border="1">
+                    <thead>
+                        <tr>
+                            <th class="one">Datum</th>
+                            <th class="two">Ort</th>
+                            <th class="three">Uhrzeit</th>
+                            <th class="four">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td >Information</td>
+                            <td >Information</td>
+                            <td >Information</td>
+                            <td >Information</td>
+                        </tr>
+                        <tr>
+                            <td >Information</td>
+                            <td >Information</td>
+                            <td >Information</td>
+                            <td >Information</td>
+                        </tr>
+                        <tr>
+                            <td >Information</td>
+                            <td >Information</td>
+                            <td >Information</td>
+                            <td >Information</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="kontakt">
+                <p>Haben Sie Fragen ?</p>
+                <p>Kontaktieren Sie sich an unsere Hotline.</p>
+                <a href="">Kontakt aufnehmen</a>
+            </div>
+        </section>
+    </main>
+    <special-footer></special-footer>
+    <script src="/public/client_table.js"></script>
+</body>
+</html>
